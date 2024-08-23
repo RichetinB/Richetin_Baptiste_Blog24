@@ -8,7 +8,7 @@ exports.data = {
     return /*html*/ `
       <link href="/assets/css/blog.css" rel="stylesheet">
       <div class="posts-wrapper">
-        <h1>My blog</h1>
+        <h1>Le Blog de Baptiste Richetin : Technologie et Innovation</h1>
         <ul class="posts">
           ${posts
             .map((post, i) => {
