@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    --text-dark: hsl(245, 15%, 25%);
+    font-size: 1.125rem;
+  }
+  
+  /* body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --gradient-1: #ffb100;
+    --gradient-2: #ffb800;
+    --gradient-3: #ffbf00;
+    --gradient-4: #ffc500;
+    --gradient-5: #ffcc00;
+    --gradient-6: #ffd624;
+    --gradient-7: #ffe038;
+    --gradient-8: #ffeb49;
+    --gradient-9: #fff558;
+    --gradient-10: #ffff66;
+    background-color: var(--gradient-4);
+    background-image: radial-gradient(
+      circle at bottom left,
+      var(--gradient-1) 0,
+      var(--gradient-2) 0 10%,
+      var(--gradient-3) 0 20%,
+      var(--gradient-4) 0 30%,
+      var(--gradient-5) 0 40%,
+      var(--gradient-6) 0 50%,
+      var(--gradient-7) 0 60%,
+      var(--gradient-8) 0 70%,
+      var(--gradient-9) 0 80%,
+      var(--gradient-10) 0 90%
+    );
+    background-size: cover;
+    color: var(--text-dark);
+  } */
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1440 320%27%3E%3Cpath fill=%27%230099ff%27 fill-opacity=%271%27 d=%27M0,128L20,138.7C40,149,80,171,120,160C160,149,200,107,240,90.7C280,75,320,85,360,112C400,139,440,181,480,192C520,203,560,181,600,170.7C640,160,680,160,720,170.7C760,181,800,203,840,208C880,213,920,203,960,176C1000,149,1040,107,1080,85.3C1120,64,1160,64,1200,96C1240,128,1280,192,1320,197.3C1360,203,1400,149,1420,122.7L1440,96L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z%27%3E%3C/path%3E%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+    color: var(--text-dark);
+  }
+  
+  
+  .page {
+    min-height: 100vh;
+    /* use grid to make the content always fill the height */
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .site-header > * {
+    --delay: 0s;
+    animation: fadeIn 2s calc(0.5s + var(--delay)) forwards,
+      slideIn 1s calc(0.5s + var(--delay)) forwards;
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  
+  .site-header > nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .site-header a {
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .site-header > nav a:hover,
+  /* `aria-current` marks the link to the page you're on */
+  .site-header > nav a[aria-current="page"] {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+    --delay: 0s;
+    animation: fadeIn 2s var(--delay) forwards;
+    opacity: 0;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--text-dark);
+    color: white;
+  }
+  
+  footer > * {
+    margin: 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* disable ALL animation for users who choose this setting */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  

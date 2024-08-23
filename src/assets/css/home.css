@@ -1,0 +1,99 @@
+/* Styles de base pour centrer le contenu */
+main {
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+/* Style général pour la page */
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #555;
+}
+
+.intro-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.pdf-container {
+  margin-top: 20px;
+}
+
+.cv-download, .linkedin a, .contact a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.cv-download a:hover, .linkedin a:hover, .contact a:hover {
+  text-decoration: underline;
+}
+
+/* Image section style */
+.image-section img {
+  margin-top: 30px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+/* Blog Link Section */
+.blog-link {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.blog-link h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.blog-link p {
+  margin-bottom: 20px;
+}
+
+/* bouton vers blog */
+/* .btn-blog {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+} */
+
+.btn-blog:hover {
+  background-color: #155ab6;
+}
