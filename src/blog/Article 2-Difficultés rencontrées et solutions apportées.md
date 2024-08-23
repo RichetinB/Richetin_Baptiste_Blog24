@@ -1,6 +1,6 @@
 ---
 title: 2- Difficultés rencontrées et solutions apportées
-date: 2024-05-06
+date: 2024-06-20
 ---
 ## Introduction
 

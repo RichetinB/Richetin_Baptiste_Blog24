@@ -1,6 +1,6 @@
 ---
 title: 4- Compétences acquises
-date: 2024-05-06
+date: 2024-06-20
 ---
 
 # Compétences Acquises

@@ -10,7 +10,6 @@ exports.render = () => {
       <div class="contact-container">
           <h1>Contactez-moi</h1>
 
-          <p>Vous avez une question ou souhaitez en savoir plus sur mon profil ? N'hésitez pas à me contacter via le formulaire ci-dessous ou en utilisant les coordonnées directes.</p>
           
           <section class="contact-info">
               <h2>Mes Coordonnées</h2>
